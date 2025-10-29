@@ -19,18 +19,25 @@
         <service
             android:name=".NotificationService"
             android:enabled="true"
-            android:exported="true"
-            android:foregroundServiceType="dataSync"></service>
+            android:exported="false"
+            android:foregroundServiceType="dataSync"/>
+
+        <!-- (ASSIGNMENT) Daftarkan service kedua -->
+        <service
+            android:name=".SecondNotificationService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"/>
 
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
 
 </manifest>
+
